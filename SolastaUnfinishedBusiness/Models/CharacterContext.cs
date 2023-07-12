@@ -1509,3 +1509,22 @@ internal static class CharacterContext
 
     #endregion
 }
+
+internal static void SwitchRangerPreparedCasting()
+{
+    if (Main.Settings.EnableRangerPreparedCasting)
+    {
+        Ranger.FeatureUnlocks.RemoveAll(x.FeatureDefinition == CastSpellRanger);
+        Ranger.FeatureUnlocks.TryAdd(new FeatureUnlockByLevel(CastSpellRangerPrepared, 2));
+    }
+    else
+    {
+        Ranger.FeatureUnlocks.RemoveAll(x.FeatureDefinition == CastSpellRangerPrepared);
+        Ranger.FeatureUnlocks.TryAdd(new FeatureUnlockByLevel(CastSpellRanger, 2));
+    }
+
+    if (Main.Settings.EnableSortingFutureFeatures)
+    {
+        Ranger.FeatureUnlocks.Sort(Sorting.CompareFeatureUnlock);
+    }
+}

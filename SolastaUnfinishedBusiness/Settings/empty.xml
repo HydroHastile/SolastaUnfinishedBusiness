@@ -152,6 +152,7 @@
     <EnableMonkWeaponSpecialization>false</EnableMonkWeaponSpecialization>
     <GrantScimitarSpecializationToBardRogue>false</GrantScimitarSpecializationToBardRogue>
     <EnableRogueCunningStrike>false</EnableRogueCunningStrike>
+    <EnableRangerPreparedCasting>false</EnableRangerPreparedCasting>
     <EnableLevel20>false</EnableLevel20>
     <EnableMulticlass>false</EnableMulticlass>
     <MaxAllowedClasses>0</MaxAllowedClasses>
